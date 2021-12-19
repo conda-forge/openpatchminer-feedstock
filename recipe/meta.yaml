@@ -23,13 +23,14 @@ requirements:
     - keyring
     - matplotlib-base
     - numpy
-    - openslide-python
     - pandas
     - python >=3.6
     - scikit-image
     - tqdm
     - twine
     - wheel
+    - zarr
+    - tifffile
 
 test:
   commands:
