@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/OpenPatchMiner-{{ version }}.tar.gz
-  sha256: ee0fa94e00d97d7f82a24102014ff35afb47b7360ac093a0b24d03c5afd44fde
+  sha256: d3fbd42af73027f0c5723352fc40250f94373a16d571b3b8f15b3b4cba54cd2d
 
 build:
   number: 0
