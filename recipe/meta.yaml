@@ -7,24 +7,24 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/OpenPatchMiner-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/OpenPatchMiner-{{ version }}.tar.gz
   sha256: d3fbd42af73027f0c5723352fc40250f94373a16d571b3b8f15b3b4cba54cd2d
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python {{ python_min }}
   run:
     - keyring
     - matplotlib-base
     - numpy
     - pandas
-    - python >=3.6
+    - python >={{ python_min }}
     - scikit-image
     - tqdm
     - twine
@@ -38,6 +38,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/CBICA/OPM
